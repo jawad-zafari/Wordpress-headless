@@ -1,19 +1,20 @@
 import React from 'react';
+import '../App.css';
 
 function Header(props) {
-  let title = "Derniers Articles du Blog";
+  let title = "Bienvenue sur mon blog";
   
-  if (props.currentView == 'home') {
-    title = 'Bienvenue sur mon blog';
-  }
-  else if (props.currentView == 'about') {
+ if (props.currentView == 'about') {
     title = 'À propos de blog';
+  }
+  else if (props.currentView == 'articles') {
+    title = "Derniers Articles du Blog";
   }
 
   return (
     <header className="App-header">
       <nav className="top-nav">
-        <div className="logo">Mon Blog Headless</div>
+        <div className="logo"><a href="/">Mon Blog Headless</a></div>
         <ul>
           <li onClick={() => props.setCurrentView('home')}>Accueil</li>
           <li onClick={() => props.setCurrentView('articles')}>Articles</li>
