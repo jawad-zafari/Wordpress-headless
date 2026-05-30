@@ -38,7 +38,27 @@ function PostList(props) {
     }
   }
 
- 
+  return (
+    <div>
+      {posts.map((post) => {
+        
+        let isOpen = false;
+        if (expandedPostId === post.id) {
+          isOpen = true;
+        }
+
+        return (
+          <PostCard 
+            key={post.id} 
+            post={post} 
+            isExpanded={isOpen}
+            setExpandedPostId={setExpandedPostId}
+          />
+        );
+      })}
+
+      <div></div>
+  );
 }
 
 export default PostList;
