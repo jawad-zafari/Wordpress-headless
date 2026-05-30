@@ -31,6 +31,13 @@ function PostList(props) {
     }
   }
 
+  function handleNextPage() {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+      setExpandedPostId(null);
+    }
+  }
+
  
 }
 
