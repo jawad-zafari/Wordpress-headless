@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 
 function PostCard(props) {
   const post = props.post;
@@ -10,7 +11,7 @@ function PostCard(props) {
       {props.isExpanded === true && (
         <div>
           <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-          <button onClick={() => props.setExpandedPostId(null)}>
+          <button className="close-button" onClick={() => props.setExpandedPostId(null)}>
             Fermer l'article
           </button>
         </div>
@@ -19,7 +20,7 @@ function PostCard(props) {
       {props.isExpanded === false && (
         <div>
           <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
-          <button onClick={() => props.setExpandedPostId(post.id)}>
+          <button className="read-more" onClick={() => props.setExpandedPostId(post.id)}>
             Lire la suite
           </button>
         </div>
