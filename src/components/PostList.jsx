@@ -39,7 +39,7 @@ function PostList(props) {
   }
 
   return (
-    <div>
+    <div className="post-list">
       {posts.map((post) => {
         
         let isOpen = false;
