@@ -24,6 +24,13 @@ function PostList(props) {
       });
   }, [props.apiUrl, currentPage]);
 
+  function handlePrevPage() {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+      setExpandedPostId(null);
+    }
+  }
+
  
 }
 
