@@ -16,7 +16,14 @@ function PostCard(props) {
         </div>
       )}
 
-     
+      {props.isExpanded === false && (
+        <div>
+          <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
+          <button onClick={() => props.setExpandedPostId(post.id)}>
+            Lire la suite
+          </button>
+        </div>
+      )}
     </article>
   );
 }
