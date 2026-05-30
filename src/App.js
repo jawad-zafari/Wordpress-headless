@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import Header from './components/Header';
+import PostList from './components/PostList';
+import PageContent from './components/PageContent';
 
 function App() {
- return(
-    <div className="App">
-      <header>
-        <h1>Mon Blog Headless</h1>
-      </header>
-      <main>
-        <p>Bienvenue sur mon blog !</p>
-      </main>
-    </div>
- );
+  
 }
 
 export default App;
