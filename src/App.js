@@ -41,7 +41,26 @@ function App() {
     sendingTitle = pageData.title.rendered;
   }
 
-  
+  return (
+    <div className="App">
+      <Header 
+        currentView={currentView} 
+        setCurrentView={setCurrentView} 
+        pageTitle={sendingTitle} 
+      />
+      
+      <main className="posts-container">
+
+        {currentView === 'articles' && (
+          <PostList apiUrl={API_URL} />
+        )}
+
+        {currentView !== 'articles' && (
+          <PageContent pageData={pageData} />
+        )}
+      </main>
+    </div>
+  );
 }
 
 export default App;
