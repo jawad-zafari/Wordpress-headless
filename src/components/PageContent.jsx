@@ -6,7 +6,9 @@ function PageContent(props) {
   }
 
   return (
-    <div></div>
+    <article className="post-card">
+      <div dangerouslySetInnerHTML={{ __html: props.pageData.content.rendered }} />
+    </article>
   );
 }
 
