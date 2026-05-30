@@ -57,7 +57,12 @@ function PostList(props) {
         );
       })}
 
-      <div></div>
+      <div className="pagination">
+        <button onClick={handlePrevPage}>Page Précédente</button>
+        <span> Page {currentPage} sur {totalPages} </span>
+        <button onClick={handleNextPage}>Page Suivante</button>
+      </div>
+    </div>
   );
 }
 
