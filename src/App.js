@@ -19,9 +19,8 @@ function App() {
         slug = 'a-propos';
       }
 
-
-      const url = API_URL + '/pages?slug=' + slug;
-
+      const url = `${API_URL}/pages?slug=${slug}`;
+      
       fetch(url)
         .then((response) => {
           return response.json();
